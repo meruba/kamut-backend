@@ -1,0 +1,81 @@
+.drink-section
+  .header-panel
+    background: white
+    padding: 10px 20px 10px 20px
+    box-shadow: 0 2px 1px rgba(170,170,170,0.25)
+    span
+      font-size: 14px
+      color: #aaa
+      vertical-align: sub
+    a
+      padding: 2px 8px
+      font-weight: bold
+  .body-panel
+    margin-top: 3px
+    padding: 10px
+    background: white
+    min-height: 500px
+    box-shadow: 0 2px 1px rgba(170,170,170,0.25)
+
+  .drink
+    padding: 15px 5px 15px 10px
+    div
+      border: 1px solid #e7e7e7
+      height: 120px
+      cursor: pointer
+      text-align: center
+      vertical-align: sub
+      &:hover
+        background-color: #30C9E8
+        color: white
+    h4
+      text-transform: uppercase
+      margin-top: 20%
+
+  // empty state
+  .empty-message
+    text-align: center
+    padding-top: 10%
+    svg#circle-mug
+      width: 150px
+      height: 150px
+
+// show drink
+.drink-detail
+  background: white
+  legend
+    text-align: center
+    text-transform: uppercase
+  p
+    text-align: justify
+  .panel-left
+    padding: 15px
+    .ingredients-drink
+      // padding: 5px 5px 15px 10px
+      text-align: center
+      min-height: 90px
+      min-width: 90px
+      padding-top: 15px
+      padding-bottom: 7.5px
+      div
+        border: 1px solid #e7e7e7
+        background: #30C9E8
+        color: white
+        span
+          font-size: 25px
+  .panel-right
+    text-align: center
+    padding-top: 10%
+    .placeholder-drink
+      padding-bottom: 10px
+    #label-mark
+      fill: #5FAA82 !important
+    #seed-cover
+      fill: #795548 !important
+
+// new-edit drink
+.drink-form
+  background: white
+  padding: 20px
+  .list-ingredients
+    padding: 20px

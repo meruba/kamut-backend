@@ -1,0 +1,11 @@
+.drink-section
+  .row.header-panel
+    span All Drinks
+    a.btn.btn-success.btn-sm.pull-right ng-if="!vmDrinks.noData" ui-sref="home.new()" +
+  .row.body-panel
+    .empty ng-if="vmDrinks.noData"
+      div ng-include="'empty-state/no-drinks.html'"
+    .col-md-3.col-xs-6.drink ng-repeat="drink in vmDrinks.drinks"
+      div ui-sref="home.drink({ drinkId: drink.id })"
+        h4 ng-bind="::drink.name"
+

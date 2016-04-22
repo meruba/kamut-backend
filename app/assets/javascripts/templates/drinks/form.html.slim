@@ -1,0 +1,26 @@
+.drink-form.col-md-6.col-md-offset-3
+  h2.text-center ng-bind="vmDrink.editDrink ? 'Edit Drink' : 'New Drink' "
+  .form-drink
+    .form-group
+      label Name
+      input.form-control ng-model="vmDrink.drink.name" required="required" type="text"
+    .form-group
+      label Description
+      textarea rows="4" class="form-control" ng-model="vmDrink.drink.description"
+    .ingredient
+      legend.text-center Ingredients
+      form.form-inline
+        .form-group
+          label.sr-only name
+          input.form-control type='text' placeholder='Ingredient name' ng-model="vmDrink.ingredient.name"
+        .form-group
+          label.sr-only amount
+          input.form-control type='number' placeholder='Ingredient amount' ng-model="vmDrink.ingredient.amount"
+        button.btn.btn-default(ng-click="vmDrink.addIng()") +
+    .list-ingredients
+      div ng-repeat="ing in vmDrink.drink.ingredients" ng-if="!ing.showField"
+        span ng-bind="ing.name"
+        span ...............................
+        span.text-muted ng-bind="ing.amount"
+        spna.text-danger ng-click="vmDrink.removeIng(ing)" X
+  .btn.btn-primary.pull-right ng-click="vmDrink.save(vmDrink.drink)" ng-bind="vmDrink.editDrink ? 'Update' : 'Save' "

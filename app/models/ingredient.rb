@@ -11,4 +11,7 @@
 #
 
 class Ingredient < ActiveRecord::Base
+  begin :relationships
+    belongs_to :drink
+  end
 end

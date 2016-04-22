@@ -1,0 +1,16 @@
+.drink-detail
+  .col-md-6.col-xs-12.panel-left
+    legend ng-bind="vmDrink.drink.name"
+    label Description
+    p ng-bind="vmDrink.drink.description"
+    label  Ingredients
+    .row
+      .col-md-3.col-xs-6.ingredients-drink ng-repeat="ingredient in vmDrink.drink.ingredients"
+        div
+          span ng-bind="ingredient.amount"
+          h5 ng-bind="ingredient.name"
+    a.btn.btn-default.btn-sm.pull-right ui-sref="home.edit({ drinkId: vmDrink.drink.id })" Edit
+  .col-md-6.panel-right
+    .placeholder-drink
+      .icon-mug ng-include="'shared/icon-mug.html'"
+    .btn.btn-default Upload a file

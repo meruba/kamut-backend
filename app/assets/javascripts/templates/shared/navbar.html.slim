@@ -1,0 +1,14 @@
+.bs-example.bs-navbar-top-example
+  nav.navbar.navbar-default
+    .container-fluid
+      .navbar-header
+        button.navbar-toggle.collapsed aria-expanded="false" data-target="#navbar-kamut" data-toggle="collapse" type="button"
+          span.sr-only Toggle navigation
+          span.icon-bar
+          span.icon-bar
+          span.icon-bar
+        a.navbar-brand  ui-sref="home()"  Kamut
+      #navbar-kamut.collapse.navbar-collapse
+        ul.nav.navbar-nav
+          li ui-sref-active="active"
+            a ui-sref="home.drinks()" Drinks
