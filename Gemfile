@@ -24,6 +24,7 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'responders'
 gem 'bower-rails'
+gem 'angularjs-rails'
 gem 'angular-rails-templates'
 gem "slim-rails"
 # Use ActiveModel has_secure_password
