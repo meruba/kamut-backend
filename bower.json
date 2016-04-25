@@ -11,9 +11,7 @@
       "angular-ui-router" : "latest",
       "angular-resource" : "v1.5.3",
       "angular-ui-bootstrap" : "latest",
-      "bootstrap" : "v3.3.6",
-      "angular-flash-alert" : "latest",
-      "angular-messages" : "latest"
+      "bootstrap" : "v3.3.6"
     }
   }
 }
