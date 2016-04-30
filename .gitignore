@@ -32,3 +32,5 @@ config/secrets.yml
 
 # Ignore pow environment settings
 .powenv
+
+/node_modules
