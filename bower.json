@@ -1,18 +1,17 @@
 {
+  "name": "kamut-fronend",
   "lib": {
     "name": "bower-rails generated lib assets",
-    "dependencies": {
-      "angular": "v1.5.3",
-      "angular-ui-router" : "latest",
-      "angular-resource" : "v1.5.3",
-      "angular-ui-bootstrap" : "latest",
-      "bootstrap" : "v3.3.6",
-      "angular-flash-alert" : "latest",
-      "angular-messages" : "latest"
-    }
+    "dependencies": {}
   },
   "vendor": {
     "name": "bower-rails generated vendor assets",
-    "dependencies": {}
+    "dependencies": {
+      "angular": "v1.5.3",
+      "angular-ui-router" : "0.2.18",
+      "angular-resource" : "v1.5.3",
+      "angular-ui-bootstrap" : "1.3.2",
+      "bootstrap" : "v3.3.6"
+    }
   }
 }

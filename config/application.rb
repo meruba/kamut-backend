@@ -9,7 +9,7 @@ Bundler.require(*Rails.groups)
 module KamutBackend
   class Application < Rails::Application
 
-    config.assets.paths << Rails.root.join('lib', 'assets', 'components')
+    config.assets.paths << Rails.root.join('vendor', 'assets', 'components')
     config.assets.precompile.shift
     config.assets.precompile.push(Proc.new do |path|
       File.extname(path).in? [
