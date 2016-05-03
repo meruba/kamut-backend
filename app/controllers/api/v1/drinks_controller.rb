@@ -2,6 +2,8 @@ module Api
   module V1
     class DrinksController < ApplicationController
 
+      respond_to :json
+
       # save json nested attributes
       # http://stackoverflow.com/questions/19574595/rails-4-not-updating-nested-attributes-via-json#comment34449874_19574595
       nested_attributes_names = Drink.nested_attributes_options.keys.map do |key|
@@ -20,12 +22,8 @@ module Api
       end
 
       def create
-        @drink = Drink.new(drink_params)
-        if @drink.save
-          respond_to do |format|
-            format.json { render :json => @drink }
-          end
-        end
+        @drink = Drink.create(drink_params)
+        respond_with(:api, :v1, @drink)
       end
 
       def update
@@ -37,7 +35,6 @@ module Api
       def destroy
         respond_with(Drink.destroy(params[:id]))
       end
-
 
       private
 
